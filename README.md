@@ -65,3 +65,61 @@ Syntax:     def  functionname(Param1,Param2,....Param-n):  # Function Definition
             functioname(arg1,arg2,.....,arg-n)  # Function call
 
 =>Here the values of arg1,arg2,.....,arg-n of  Function call are passing to Param1,Param2,....Param-n of Function Definition Respectively.
+
+**2) Default  Parameters (or) arguments**
+		
+=>When there is a Common Value for family of Similar Function Calls then Such type of Common Value(s) must be taken  as default parameter with common value (But not recommended to pass by using Posstional arguments OR Parameters)
+
+----------------------------------------------------------------------------------------
+Syntax for Function Definition with Default Parameters
+
+----------------------------------------------------------------------------------------
+def   functionname(param1,param2,....param-n-1=Val1, Param-n=Val2):
+          ------------------------------------------------------------------
+	  ------------------------------------------------------------------
+
+->Here param-n-1 and param-n are called "default Parameters".
+->and param1,param-2... are called "Formal Possitional parameters".
+
+Rule-: When we use default parameters in the function definition, They must be used as last Parameter(s) otherwise we get Error( SyntaxError: parameter without a default follows parameter with a default)
+===============================================================================================
+
+**3) Keyword Parameters (or) arguments**
+		============================================
+=>In some of the circumstances, we know the function name and formal parameter names and we don't know the order of formal Parameter names and to pass the data / values accurately we must use the concept of Keyword Parameters (or) arguments.
+=>The implementation of Keyword Parameters (or) arguments says that all the formal parameter names used as arguments in Function call(s) as keys.
+
+Syntax for function definition:-
+
+-------------------------------------------------
+def    functionname(param1,param2...param-n):
+         ---------------------------------------------
+	 ---------------------------------------------
+
+functionname(param-n=val-n,param1=val1,param-n-1=val-n-1,.........)
+
+
+Here param-n=val-n,param1=val1,param-n-1=val-n-1,...... are called Keywords arguments
+=>When we specify Keyword arguments before Possitional Arguments in Function Calls(s) then we get 
+SyntaxError: positional argument follows keyword argument bcoz PVM gives First Priority for positional arguments.
+
+
+**4) Variables Length Parameters (or) arguments**
+		
+=>When we have familiy of multiple Similar function calls with Variable number of values / arguments then with normal python programming, we must define mutiple function defintions. This process leads to more development time. 
+=>To overcome this process, we must use the concept of Variable length Parameters .
+=>To Impelement,  Variable length Parameters concept, we must define single Function Definition and takes a formal Parameter preceded with a symbol called astrisk ( * param) and the formal parameter with astrisk symbol is called Variable length Parameters  and whose purpose is to hold / store any number of values coming from similar function calls and whose type is <class, 'tuple'>.
+
+---------------------------------------------------------------------------------------------------
+Syntax for function definition with Variables Length Parameters:
+
+---------------------------------------------------------------------------------------------------
+	def   functionname(list of Posstional formal params,  *param1 , param2=value) :
+	        --------------------------------------------------
+		--------------------------------------------------
+
+=>Here *param1 is called Variable Length parameter and it can hold any number of argument values (or) variable number of argument values and *param1 type is <class,'tuple'>
+
+=>Rule:- The *param1 must always written at last part of Function Heading and it must be only one (but not multiple)
+=>Rule:- When we use Variable length and default parameters  in function Heading, we use default parameter as last and before we use variable length parameter and in function calls, we should not use default parameter as Key word argument bcoz Variable number of values are treated as Posstional Argument Value(s) .
+
